@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.white100,
     fontSize: 15,
     textAlign: 'center',
-    fontFamily: theme.fonts.text700,
+    fontFamily: theme.fonts.text600,
     letterSpacing: 0.5,
   },
 })

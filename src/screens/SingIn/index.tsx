@@ -4,13 +4,17 @@ import { Background } from "../../components/Background";
 import { styles } from "./styles";
 import { LongInput } from "../../components/LongInput";
 import { LongButton } from "../../components/LongButton";
+import { useNavigation } from "@react-navigation/native";
 
 
 export function SingIn() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigation = useNavigation();
 
-    async function loginUser() { }
+    async function loginUser() {
+        navigation.navigate('Home');
+    }
 
     return (
         <Background>
@@ -33,7 +37,7 @@ export function SingIn() {
                             onChangeText={setUsername}
                         />
                     </View>
-                    <View style={styles.inputGroup, { marginBottom: 200 }}>
+                    <View style={[styles.inputGroup, { marginBottom: 200 }]}>
                         <Text style={styles.label}>Senha</Text>
                         <LongInput
                             secureTextEntry
