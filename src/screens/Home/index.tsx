@@ -4,14 +4,18 @@ import { Background } from "../../components/Background";
 import { styles } from "./styles";
 import { LongButton } from "../../components/LongButton";
 import { LongInput } from "../../components/LongInput";
+import { LongButtonOutline } from "../../components/LongButtonOutline";
+import { useNavigation } from "@react-navigation/native";
 
 
 export function Home() {
     const [cep, setCep] = useState('');
-
-    function editAdrees() {
-
+    const navigation = useNavigation();
+    function searchAdrees() {
+        navigation.navigate('Address');
     }
+
+    function logout() { }
 
     return (
         <Background>
@@ -33,12 +37,19 @@ export function Home() {
                     <View style={styles.inputGroup}>
                         <Text style={styles.label}>CEP</Text>
                         <LongInput
+                            keyboardType="numeric"
                             onChangeText={setCep}
                         />
                     </View>
-                    <LongButton
-                        title='Entrar'
-                        onPress={editAdrees}
+                    <View style={{ marginBottom: 30 }}>
+                        <LongButton
+                            title='Buscar'
+                            onPress={searchAdrees}
+                        />
+                    </View>
+                    <LongButtonOutline
+                        title="Deslogar"
+                        onPress={logout}
                     />
 
                 </View>

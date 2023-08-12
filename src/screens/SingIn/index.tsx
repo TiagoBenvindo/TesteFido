@@ -4,13 +4,16 @@ import { Background } from "../../components/Background";
 import { styles } from "./styles";
 import { LongInput } from "../../components/LongInput";
 import { LongButton } from "../../components/LongButton";
+import { useNavigation } from "@react-navigation/native";
 
 
 export function SingIn() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigation = useNavigation();
 
     async function loginUser() {
+        navigation.navigate('Home');
     }
 
     return (

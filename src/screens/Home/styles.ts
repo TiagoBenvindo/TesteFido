@@ -40,5 +40,17 @@ export const styles = StyleSheet.create({
     inputGroup: {
         marginTop: 150,
         marginBottom: 175,
+    },
+    inputMask: {
+        width: "100%",
+        height: 52,
+        backgroundColor: theme.colors.white100,
+        color: theme.colors.gray400,
+        fontFamily: theme.fonts.text400,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: theme.colors.white100,
+        fontSize: 13,
+        padding: 16,
     }
 })
