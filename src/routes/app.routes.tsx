@@ -2,6 +2,7 @@ import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { theme } from "../global/styles/theme";
 import { SingIn } from "../screens/SingIn";
+import { Home } from "../screens/Home";
 
 export type RootStackParamsList = {
     SingIn: undefined;
@@ -23,9 +24,14 @@ export function AppRoutes() {
             }}
         >
             <Screen
+                name="Home"
+                component={Home}
+            />
+            <Screen
                 name='SingIn'
                 component={SingIn}
             />
+
         </Navigator>
     )
 }

@@ -10,7 +10,8 @@ export function SingIn() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    async function loginUser() { }
+    async function loginUser() {
+    }
 
     return (
         <Background>
@@ -33,7 +34,7 @@ export function SingIn() {
                             onChangeText={setUsername}
                         />
                     </View>
-                    <View style={styles.inputGroup, { marginBottom: 200 }}>
+                    <View style={[styles.inputGroup, { marginBottom: 200 }]}>
                         <Text style={styles.label}>Senha</Text>
                         <LongInput
                             secureTextEntry
