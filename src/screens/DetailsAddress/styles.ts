@@ -9,22 +9,15 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     title: {
-        height: 29,
+        height: 33,
         width: "100%",
-        alignItems: "center",
         flexDirection: "row",
-        justifyContent: "center",
         marginBottom: 16,
     },
     textTitle: {
-        fontFamily: theme.fonts.text400,
+        fontFamily: theme.fonts.text500,
         fontSize: 24,
         color: theme.colors.purple200,
-    },
-    textTitleBold: {
-        fontFamily: theme.fonts.text700,
-        color: theme.colors.purple200,
-        fontSize: 24,
     },
     subTitle: {
         fontFamily: theme.fonts.text400,
@@ -47,5 +40,18 @@ export const styles = StyleSheet.create({
     },
     inputGroup: {
         marginBottom: 25,
+    },
+    textTitleModal: {
+        paddingTop: 40,
+        textAlign: "center",
+        fontFamily: theme.fonts.text500,
+        fontSize: 24,
+        color: theme.colors.purple200,
+        paddingHorizontal: 24,
+    },
+    groupButton: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingTop: 48,
     }
 })
