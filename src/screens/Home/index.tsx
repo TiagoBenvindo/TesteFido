@@ -12,7 +12,7 @@ export function Home() {
     const [cep, setCep] = useState('');
     const navigation = useNavigation();
     function searchAdrees() {
-        navigation.navigate('Address');
+        navigation.navigate('DetailsAddress');
     }
 
     function logout() { }
