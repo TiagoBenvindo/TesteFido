@@ -5,15 +5,16 @@ import { styles } from "./styles";
 
 type Props = RectButtonProps & {
     title: string;
+    colorText: string;
 }
 
-export function LongButtonOutline({ title, ...rest }: Props) {
+export function LongButtonOutline({ title, colorText, ...rest }: Props) {
     return (
         <RectButton
             style={styles.container}
             {...rest}
         >
-            <Text style={styles.title}>
+            <Text style={[styles.title, { color: colorText }]}>
                 {title}
             </Text>
         </RectButton>

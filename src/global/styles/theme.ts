@@ -5,6 +5,7 @@ export const theme = {
         purple200: "#7D21CC",
         gray500: "#323133",
         gray400: "#736F75",
+        red: "#CC2121",
     },
 
     fonts: {

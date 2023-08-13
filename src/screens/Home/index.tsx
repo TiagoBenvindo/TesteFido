@@ -6,6 +6,7 @@ import { LongButton } from "../../components/LongButton";
 import { LongInput } from "../../components/LongInput";
 import { LongButtonOutline } from "../../components/LongButtonOutline";
 import { useNavigation } from "@react-navigation/native";
+import { theme } from "../../global/styles/theme";
 
 
 export function Home() {
@@ -48,6 +49,7 @@ export function Home() {
                         />
                     </View>
                     <LongButtonOutline
+                        colorText={theme.colors.purple200}
                         title="Deslogar"
                         onPress={logout}
                     />

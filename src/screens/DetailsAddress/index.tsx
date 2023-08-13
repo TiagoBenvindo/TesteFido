@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import { BorderlessButton } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Feather";
 import { theme } from "../../global/styles/theme";
+import { LongButtonOutline } from "../../components/LongButtonOutline";
 
 export function DetailsAddress() {
     const navigation = useNavigation();
@@ -34,20 +35,18 @@ export function DetailsAddress() {
                         Endereço encontrado
                     </Text>
                 </View>
-                <View>
-                    <View style={styles.inputGroup}>
-                        <Text style={styles.label}>Usuário</Text>
-                    </View>
-                    <View style={[styles.inputGroup, { marginBottom: 200 }]}>
-                        <Text style={styles.label}>Senha</Text>
-                    </View>
-                    <LongButton
-                        title='Entrar'
-                        onPress={edit}
+                <View style={{ marginBottom: 30 }}>
+                    <LongButtonOutline
+                        colorText={theme.colors.purple200}
+                        title="Editar"
                     />
-
                 </View>
+                <LongButtonOutline
+                    colorText={theme.colors.red}
+                    title="Deletar"
+                />
+
             </View>
-        </Background>
+        </Background >
     );
 }
