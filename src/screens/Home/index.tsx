@@ -6,13 +6,14 @@ import { LongButton } from "../../components/LongButton";
 import { LongInput } from "../../components/LongInput";
 import { LongButtonOutline } from "../../components/LongButtonOutline";
 import { useNavigation } from "@react-navigation/native";
+import { theme } from "../../global/styles/theme";
 
 
 export function Home() {
     const [cep, setCep] = useState('');
     const navigation = useNavigation();
     function searchAdrees() {
-        navigation.navigate('Address');
+        navigation.navigate('DetailsAddress');
     }
 
     function logout() { }
@@ -48,6 +49,7 @@ export function Home() {
                         />
                     </View>
                     <LongButtonOutline
+                        colorText={theme.colors.purple200}
                         title="Deslogar"
                         onPress={logout}
                     />
