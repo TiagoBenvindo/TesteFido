@@ -22,6 +22,7 @@ export function DetailsAddress() {
     }
 
     function handleOpenModal() {
+        console.log('Clicou');
         setStatusModal(true)
     }
     function handleCloseModal() {
@@ -88,10 +89,13 @@ export function DetailsAddress() {
                 <LongButtonOutline
                     colorText={theme.colors.red}
                     title="Deletar"
-                    onPress={() => handleOpenModal}
+                    onPress={handleOpenModal}
                 />
                 <ModalView closeModal={handleCloseModal} visible={statusModal}>
-                    <View>
+                    <Text style={styles.textTitleModal}>
+                        Deseja mesmo deletar esse endereço?
+                    </Text>
+                    <View style={styles.groupButton}>
                         <MiddleButton
                             title="Sim"
                         />
@@ -100,6 +104,7 @@ export function DetailsAddress() {
                             isFilled={true}
                         />
                     </View>
+
                 </ModalView>
 
             </View>

@@ -16,10 +16,10 @@ type Props = RectButtonProps & {
 export function MiddleButton({ title, isFilled, ...rest }: Props) {
   return (
     <RectButton
-      style={[styles.container, isFilled ? styles.containerline : {}]}
+      style={[isFilled ? styles.containerline : styles.container]}
       {...rest}
     >
-      <Text style={styles.title}>
+      <Text style={[isFilled ? styles.titleLine : styles.title]}>
         {title}
       </Text>
     </RectButton>
