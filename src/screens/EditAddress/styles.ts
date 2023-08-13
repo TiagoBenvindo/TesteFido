@@ -19,11 +19,10 @@ export const styles = StyleSheet.create({
         fontSize: 24,
         color: theme.colors.purple200,
     },
-    subTitle: {
+    textTitleBold: {
         fontFamily: theme.fonts.text400,
-        fontSize: 13,
-        color: theme.colors.gray400,
-        marginBottom: 100,
+        color: theme.colors.purple200,
+        fontSize: 24,
     },
     label: {
         fontSize: 16,
@@ -38,7 +37,31 @@ export const styles = StyleSheet.create({
         color: theme.colors.gray500,
         textAlign: 'center',
     },
+    rowGroup: {
+        width: "100%",
+    },
     inputGroup: {
-        marginBottom: 25,
+        width: "100%",
+        marginBottom: 24,
+    },
+    inputLongGroup: {
+        width: "65%",
+        marginBottom: 24,
+        justifyContent: 'flex-start',
+    },
+    inputShortGroup: {
+        width: "25%"
+    },
+    inputMask: {
+        width: "100%",
+        height: 52,
+        backgroundColor: theme.colors.white100,
+        color: theme.colors.gray400,
+        fontFamily: theme.fonts.text400,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: theme.colors.white100,
+        fontSize: 13,
+        padding: 16,
     }
 })

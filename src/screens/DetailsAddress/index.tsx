@@ -19,7 +19,7 @@ export function DetailsAddress() {
     }
 
     async function edit() {
-
+        navigation.navigate("EditAddress");
     }
 
     return (
@@ -72,6 +72,7 @@ export function DetailsAddress() {
                     <LongButtonOutline
                         colorText={theme.colors.purple200}
                         title="Editar"
+                        onPress={edit}
                     />
                 </View>
                 <LongButtonOutline
