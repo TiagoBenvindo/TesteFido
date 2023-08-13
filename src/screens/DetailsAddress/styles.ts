@@ -9,11 +9,9 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     title: {
-        height: 29,
+        height: 33,
         width: "100%",
-        alignItems: "center",
         flexDirection: "row",
-        justifyContent: "center",
         marginBottom: 16,
     },
     textTitle: {
