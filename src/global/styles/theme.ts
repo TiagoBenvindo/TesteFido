@@ -7,6 +7,7 @@ export const theme = {
         gray500: "#323133",
         gray400: "#736F75",
         red: "#CC2121",
+        overlay: 'rgba(0,0,0,0.5)'
     },
 
     fonts: {

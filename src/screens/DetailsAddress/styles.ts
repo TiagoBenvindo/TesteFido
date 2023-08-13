@@ -40,5 +40,18 @@ export const styles = StyleSheet.create({
     },
     inputGroup: {
         marginBottom: 25,
+    },
+    textTitleModal: {
+        paddingTop: 40,
+        textAlign: "center",
+        fontFamily: theme.fonts.text500,
+        fontSize: 24,
+        color: theme.colors.purple200,
+        paddingHorizontal: 24,
+    },
+    groupButton: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingTop: 48,
     }
 })

@@ -10,12 +10,23 @@ import { theme } from "../../global/styles/theme";
 import { LongButtonOutline } from "../../components/LongButtonOutline";
 import { DateLine } from "../../components/DateLine";
 import { ListDivider } from "../../components/ListDivider";
+import { ModalView } from "../../components/ModalView";
+import { MiddleButton } from "../../components/MiddleButton";
 
 export function DetailsAddress() {
+    const [statusModal, setStatusModal] = useState(false);
     const navigation = useNavigation();
 
     async function handleGoBack() {
         navigation.goBack();
+    }
+
+    function handleOpenModal() {
+        console.log('Clicou');
+        setStatusModal(true)
+    }
+    function handleCloseModal() {
+        setStatusModal(false)
     }
 
     async function edit() {
@@ -78,7 +89,23 @@ export function DetailsAddress() {
                 <LongButtonOutline
                     colorText={theme.colors.red}
                     title="Deletar"
+                    onPress={handleOpenModal}
                 />
+                <ModalView closeModal={handleCloseModal} visible={statusModal}>
+                    <Text style={styles.textTitleModal}>
+                        Deseja mesmo deletar esse endereço?
+                    </Text>
+                    <View style={styles.groupButton}>
+                        <MiddleButton
+                            title="Sim"
+                        />
+                        <MiddleButton
+                            title="Não"
+                            isFilled={true}
+                        />
+                    </View>
+
+                </ModalView>
 
             </View>
         </Background >

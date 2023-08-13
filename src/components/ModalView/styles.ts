@@ -4,7 +4,7 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: '80%',
+    marginTop: "130%",
     backgroundColor: theme.colors.whiteDefault,
     opacity: 1,
     borderTopLeftRadius: 32,
@@ -14,6 +14,6 @@ export const styles = StyleSheet.create({
   },
   overlay: {
     flex: 1,
-    backgroundColor: theme.colors.whiteDefault,
+    backgroundColor: theme.colors.overlay,
   }
 })
